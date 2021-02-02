@@ -1,0 +1,84 @@
+$my-primary: (rgb(70, 134, 177));
+
+// .img {
+//     background-image: url('../../../assets/images/user.jpg');
+//     background-size: cover;
+// }
+
+.lawyer {
+     max-width: 600px;
+}
+
+.mat-card-title {
+    font-size: 20px;
+}
+
+.lawyer{
+    padding-top: 10px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color:  #f4f8fc;
+}
+
+
+.lawyer:hover {
+    background-color: #f4f6f7de;
+  }
+  
+.delete-button {
+   left: 130px;
+}
+
+ .mat-card-header {
+    
+   
+}
+.title {
+    // color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card-list {
+    margin: auto;
+}
+
+$header-height: 150px;
+
+.card {
+//    padding: 0;
+   margin: 0 auto 0;
+   margin-top: 30px;
+  width: 50%;
+   background-color: rgba(135, 195, 234, 0.39);
+   box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.14);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    box-sizing: border-box;
+    border-bottom: solid 1px rgba(0,0,0,0.12);
+    color: rgba(0,0,0,0.6);
+    // background-color: $my-primary;
+  
+    .title {
+    //   margin-right: auto;
+    margin-left: 5px;
+      font-weight: 400;
+    }
+  }
+  
+  .content {
+      margin-top: 15px;
+    height: 400px;
+  }
+
+  .add-button {
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-left: 35%;
+  }

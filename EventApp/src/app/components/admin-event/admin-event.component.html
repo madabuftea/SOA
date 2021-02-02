@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<!-- <app-header></app-header> -->
+
+
+<mat-card class="card">
+<mat-card-header class="header">
+        <div class="title"> Events </div>
+        <button mat-button class="add-button" (click) = openAddEventModal()>
+          <i class="material-icons">add</i>
+        </button>
+    
+   <!-- <button mat-button (click) = addLawyer()> Add Lawyer </button> -->
+  </mat-card-header>
+    <mat-card-content class="content">
+      <div *ngFor = "let e of events" class="card-list">
+        <mat-card class="lawyer"> 
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="img"></div> -->
+            <mat-card-title> {{e.title}} </mat-card-title>
+            <mat-card-subtitle>Location: {{e.location}}</mat-card-subtitle>
+            <mat-card-subtitle>Date: {{e.date}}</mat-card-subtitle>
+            <!-- <mat-card-subtitle>Accepted: {{e.accepted? e.accepted : 0}}</mat-card-subtitle> -->
+            <button mat-button class="delete-button" (click) = delete(e) ><i class="material-icons">delete</i></button>
+        </mat-card-header>
+
+      </mat-card>
+      </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Add event details</h1>
+<div mat-dialog-content>
+  
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.title" placeholder="Event Title" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.location" placeholder="Location" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.date" placeholder="Date" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>

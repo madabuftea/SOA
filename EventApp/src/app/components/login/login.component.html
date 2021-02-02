@@ -1,0 +1,55 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- <app-header></app-header> -->
+<div class="login-page">
+  <div class="title"> Event Manager </div>
+    <div class="content">
+        <form class="login-form" fxFlex  >
+            <div class="text-center">
+                
+                <div class="icon">
+                    <i class="material-icons" style="font-size: 125px; color: rgb(70, 134, 177)">
+                        account_circle
+                        </i>
+                  <div class="header">
+                      Login 
+  
+                  </div>
+                </div>
+                <div *ngIf = "error" class="err">
+                    Invalid user or password!
+                </div>
+            </div>
+            <div fxFlex  fxlayout="row" fxlayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input [(ngModel)]= "email" id="email" name="email" matInput placeholder="Email">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input [(ngModel)]="password" type="password"  id="password" name="password" matInput placeholder="Password">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column" style="margin: 20px 0 30px 0">
+                <!-- <div fxFlex>
+                    <mat-checkbox color="primary">Remember Me</mat-checkbox>
+                </div> -->
+                <span class="signup">
+                    <a (click)=goToRegister()>Sign up here </a>
+                </span>
+            </div>
+         
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <button mat-raised-button color="primary"  (click)=logIn()>Login</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

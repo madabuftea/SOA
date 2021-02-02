@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<!-- <app-header></app-header> -->
+
+
+<mat-card class="card">
+<mat-card-header class="header">
+        <div class="title"> Dashboard</div>
+        <button mat-button class="add-button" (click) = addLawyer()>
+          <i class="material-icons">add</i>
+        </button>
+    
+   <!-- <button mat-button (click) = addLawyer()> Add Lawyer </button> -->
+  </mat-card-header>
+  <mat-card-content class="content">
+<div *ngFor = "let l of lawyers" class="card-list">
+  <mat-card class="lawyer" (click) = goToProfile(l.lawyerId)>
+  <mat-card-header>
+    <!-- <div mat-card-header-text> -->
+      <div mat-card-avatar class="img"></div>
+      <mat-card-title> {{l.firstName}} {{l.lastName}}</mat-card-title>
+      <mat-card-subtitle>username: {{l.email}}</mat-card-subtitle>
+    <!-- </div> -->
+      <button mat-button class="delete-button" ><i class="material-icons">delete</i></button>
+  </mat-card-header>
+
+</mat-card>
+</div>
+</mat-card-content>
+</mat-card>

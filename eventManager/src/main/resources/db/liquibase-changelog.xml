@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+<changeSet id="1" author="mada">
+    <createTable tableName="EVENTS">
+        <column name="EVENT_ID" type="number(50)"/>
+        <column name="TITLE" type="varchar(50000)"/>
+        <column name="LOCATION" type="varchar(500)"/>
+        <column name="DATE" type="varchar(500)"/>
+        <column name="USER_ID" type="number(50)"/>
+    </createTable>
+    <createSequence sequenceName="SEQ_EVENT" minValue="1" maxValue="999999" incrementBy="1" startValue="1"/>
+    <addPrimaryKey tableName="EVENTS" columnNames="EVENT_ID" constraintName="PK_EVENT_ID"/>
+</changeSet>
+
+</databaseChangeLog>
